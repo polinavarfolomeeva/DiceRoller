@@ -56,12 +56,16 @@ fun DiceRollerApp() {
 fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
     var result by remember { mutableStateOf( 1) }
     val imageResource = when(result) {
-        1 -> R.drawable.dice_1
-        2 -> R.drawable.dice_2
-        3 -> R.drawable.dice_3
-        4 -> R.drawable.dice_4
-        5 -> R.drawable.dice_5
-        else -> R.drawable.dice_6
+        1 -> R.drawable.cat1
+        2 -> R.drawable.cat2
+        3 -> R.drawable.cat3
+        4 -> R.drawable.cat4
+        5 -> R.drawable.cat5
+        6 -> R.drawable.cat6
+        7 -> R.drawable.cat7
+        8 -> R.drawable.cat8
+        9 -> R.drawable.cat9
+        else -> R.drawable.cat10
     }
     Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally) {
         Image(painter = painterResource(imageResource), contentDescription = result.toString())
